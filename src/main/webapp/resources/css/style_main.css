@@ -179,3 +179,10 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
 .tr_notes_attr {
     border: 2px solid #999999;
 }
+
+.welcome{
+    text-align: right;
+    padding-top: 50px;
+    font-weight: normal;
+    float:right;
+}
