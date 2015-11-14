@@ -1,0 +1,19 @@
+<%@page import="domain.Note"%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="sidebar1">
+    <h4>Notes:</h4>
+    <ul class="nav">
+        <jsp:useBean id="noteList" class="dao.impl.NoteDaoImpl" scope="application"/>
+        <% try {
+            for (Note note : noteList.getNoteList()) {
+        %>
+        <li><a href="notes.jsp?note_uuid=<%=note.getUuid()%>&title=<%=note.getTitle()%>"><%=note.getTitle()%></a></li>
+
+        <%}
+
+            } catch (Exception e) {
+            e.printStackTrace();
+            }
+        %>
+    </ul>
+</div>
